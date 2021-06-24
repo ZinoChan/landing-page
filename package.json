@@ -6,7 +6,7 @@
   "license": "",
   "author": "",
   "scripts": {
-    "build": "parcel build index.html --public-url /landing-page",
+    "build": "parcel build index.html",
     "dev": "parcel index.html --open",
     "deploy": "gh-pages -d dist",
     "start": "npm run build && npm run dev",
