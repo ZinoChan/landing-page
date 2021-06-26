@@ -21,36 +21,130 @@
   }
 }());
 
-// Place any jQuery/helper plugins in here.
+//  plugins in here.
 
-gsap.from('.hero-header', {
-  y: 100,
-  opacity: 0,
-  duration: 1.5,
-  ease: "expo.inOut"
+
+import LocomotiveScroll from 'locomotive-scroll';
+gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector('.smooth-scroll'),
+    smooth: true,
+    
+  
+});
+
+locoScroll.on('scroll', ScrollTrigger.update)
+
+ScrollTrigger.scrollerProxy(".smooth-scroll", {
+  scrollTop(value) {
+    return arguments.length ? 
+    locoScroll.scrollTo(value, 0, 0):
+    locoScroll.scroll.instance.scroll.y;
+  }, getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  }, pinType: document.querySelector('.smooth-scroll').style.transform ? "transform" : "fixed"
 })
 
-gsap.from('.hero-desc', {
+
+function slideUp (el, delay = 0) {
+  gsap.from(el, {
+    scrollTrigger: {trigger:el,
+    scroller: ".smooth-scroll",
+    
+  },
+    delay,    
+    y: 100,
+    duration: .6,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+}
+
+
+function slideToRight (el, delay = 0) {
+  gsap.from(el, {
+    scrollTrigger: {trigger:el,
+    scroller: ".smooth-scroll",
+    
+  },
+    delay,    
+    x: -100,
+    duration: .6,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+}
+
+
+function slideToLeft (el, delay = 0) {
+  gsap.from(el, {
+    scrollTrigger: {trigger:el,
+    scroller: ".smooth-scroll",
+    
+  },
+    delay,    
+    x: 100,
+    duration: .6,
+    opacity: 0,
+    ease: Expo.easeInOut
+  })
+}
+
+gsap.from('.heading-line-1', {
   y: 100,
+  duration: 2,
   opacity: 0,
-  duration: 1.5,
-  delay: .6,
-  ease: "expo.inOut"
+  ease: "Expo.easeInOut"
+})
+
+gsap.from('.heading-line-2', {
+  y: 100,
+  duration: 2,
+  opacity: 0,
+  delay: .3,
+  ease: "Expo.easeInOut"
+})
+
+gsap.from('.hero-p', {
+  y: 100,
+  duration: 2,
+  delay: 1.2,
+  opacity: 0,
+  ease: "Expo.easeInOut"
 })
 
 gsap.from('.hero-btn', {
   y: 100,
+  duration: 2,
+  delay: 1.4,
   opacity: 0,
-  duration: 1.5,
-  delay: .7,
-  ease: "expo.inOut"
+  ease: "Expo.easeInOut"
 })
 
-gsap.from('.hero-img', {
-  x: 100,
-  opacity: 0,
-  delay: 1.5,
-  duration: 1.5,
-  ease: "expo.inOut"
-})
+slideUp('.illustration-1');
+slideUp('.skills-header', 0.2)
+slideUp('.skills-p', 0.5);
+slideUp('.skills-btn', 0.9);
+slideUp('.title-header', 0.2)
+slideUp('.title-p',0.5)
+slideUp('.card-02', 0.2)
+slideToRight('.card-01', 1.3)
+slideToLeft('.card-03', 1.3)
+slideUp('.pricing-card-02', 0.2)
+slideToRight('.pricing-card-01', 1.3)
+slideToLeft('.pricing-card-03', 1.3)
+slideUp('.support-header', 0.2)
+slideUp('.support-p', 0.5);
+slideUp('.support-btn', 0.9);
+slideUp('.teacher-header', 0.2)
+slideUp('.teacher-p', 0.5);
+slideUp('.teacher-btn', 0.9);
+slideToRight('.illustration-2', 0.5)
+slideToRight('.illustration-3', 0.5)
 
+
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();

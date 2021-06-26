@@ -25,6 +25,7 @@
     "@fontsource/poppins": "^4.4.5",
     "@fontsource/quicksand": "^4.4.5",
     "@fontsource/raleway": "^4.4.5",
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "locomotive-scroll": "^4.1.1"
   }
 }
