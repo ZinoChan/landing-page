@@ -23,11 +23,22 @@
   </head>
   <body class="smooth-scroll">
     <!-- Preloader -->
+    <div class="loader text-center flex items-center justify-center fixed top-0 z-50 h-screen w-screen bg-rico">
+     <div>
+     
+        <h1 class="loading text-3xl font-primary text-white font-bold mb-4">Loading</h1>
+        <div class="progress">
+          <div class="color"></div>
+        </div>
+     </div>
+    </div>
     
     <!-- Header -->
-    <header class="sticky top-0 w-full py-4 ">
+    <header class="sticky z-40 bg-white top-0 w-full py-4 shadow-sm">
       <nav class="flex max-w-screen-lg mx-auto px-2 items-center justify-between">
-        <h1>Logo</h1>
+        <div class="logo">
+          <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
+        </div>
         <ul class="flex items-center space-x-4">
           <li><a class="text-gray-500 font-medium font-secondary text-md" href="#">Home</a></li>
           <li><a class="text-gray-500 font-medium font-secondary text-md"  href="#">skills</a></li>
@@ -160,7 +171,7 @@
                   </div>
                 </div>
                 <!-- Pricing 2 -->
-                <div class="pricing-card-02 shadow-xl bg-white rounded-2xl text-center p-8  flex items-center justtify-center">
+                <div class="pricing-card-02 shadow-xl bg-white rounded-2xl text-center p-8  flex items-center justify-center">
                   <div>
                     <img src="/img/icons/pro.png" alt="pro plan icon" class="mx-auto">
                     <h3 class="text-nile font-secondary capitalize text-lg my-4">Pro</h3>
@@ -229,7 +240,9 @@
        <footer data-scroll-section id="footer" class=" bg-nile pt-10 pb-20">
         
          <div class="grid grid-cols-3 gap-4 max-w-screen-lg mx-auto">
-           <h3 class="text-white text-2xl mb-4">logo</h3>
+          <div class="logo">
+            <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
+          </div>
            <ul>
              <h3 class="text-white text-2xl mb-4">logo</h3>
              <li><a href="#" class="text-gray-100 text-lg">Home</a></li>

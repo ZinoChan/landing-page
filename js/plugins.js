@@ -25,6 +25,18 @@
 
 
 import LocomotiveScroll from 'locomotive-scroll';
+
+window.addEventListener('DOMContentLoaded',() => {
+
+
+
+	if(document.querySelector('.loader')){
+		setTimeout(() => {
+      document.querySelector('.loader').classList.add('remove');
+      console.log('remove loader');
+    }, 2800)
+	}
+
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
@@ -95,6 +107,7 @@ gsap.from('.heading-line-1', {
   y: 100,
   duration: 2,
   opacity: 0,
+  delay: 3.6,
   ease: "Expo.easeInOut"
 })
 
@@ -102,14 +115,14 @@ gsap.from('.heading-line-2', {
   y: 100,
   duration: 2,
   opacity: 0,
-  delay: .3,
+  delay: 3.8,
   ease: "Expo.easeInOut"
 })
 
 gsap.from('.hero-p', {
   y: 100,
   duration: 2,
-  delay: 1.2,
+  delay: 4,
   opacity: 0,
   ease: "Expo.easeInOut"
 })
@@ -117,7 +130,7 @@ gsap.from('.hero-p', {
 gsap.from('.hero-btn', {
   y: 100,
   duration: 2,
-  delay: 1.4,
+  delay: 4.2,
   opacity: 0,
   ease: "Expo.easeInOut"
 })
@@ -147,4 +160,4 @@ slideToRight('.illustration-3', 0.5)
 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-ScrollTrigger.refresh();
+ScrollTrigger.refresh();})
