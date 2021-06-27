@@ -34,7 +34,11 @@
     </div>
     
     <!-- Header -->
-    <header class="sticky z-40 bg-white top-0 w-full py-4 shadow-sm">
+<<<<<<< HEAD
+    <header class="sticky top-0 w-full py-4 px-2 hidden">
+=======
+    <header class="sticky top-0 w-full py-4 px-2 hidden">
+>>>>>>> 01075f8ad38358d3fb3e49db0bcc7f12becebac7
       <nav class="flex max-w-screen-lg mx-auto px-2 items-center justify-between">
         <div class="logo">
           <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
@@ -51,16 +55,16 @@
       </nav>
     </header>
 
-    <main class="bg-main">
+    <main class="bg-main px-4 overflow-x-hidden">
        <!-- Hero -->
-      <section data-scroll-section class="py-40 flex items-center justify-center hero-section">
+      <section data-scroll-section class="pt-40 pb-20 flex items-center justify-center hero-section">
           <div class="max-w-screen-md text-center">
-            <h1 class="text-6xl leading-realaxed  overflow-hidden font-bold font-primary text-sweet mb-4">
+            <h1 class="lg:text-6xl text-4xl leading-realaxed  overflow-hidden font-bold font-primary text-sweet mb-4">
               <p class="heading-line-1 mb-4">Turn your passion into </p> 
               <p class="heading-line-2"> a success career</p>
             </h1>
           <div class="overflow-hidden">
-            <p  class="text-gray-500 font-secondary mb-6 max-w-lg mx-auto hero-p">
+            <p  class="text-gray-500 font-secondary mb-6 lg:max-w-lg w-full mx-auto hero-p">
               Lorem ipsum dolor sit amet. ipsam quam pariatur cupiditate laboriosam, quasi, eos odit, minus incidunt explicabo recusandae praesentium delectus.
             </p>
             <button class="hero-btn rounded-full px-6 py-2 shadow-rico font-bold bg-rico text-white shadow-secondary">Get Started</button>
@@ -69,9 +73,9 @@
       </section>
 
        <!-- Skills -->
-       <section data-scroll-section class="skills py-24 max-w-screen-lg mx-auto">
+       <section data-scroll-section class="skills max-w-screen-lg mx-auto">
 
-          <div class="grid grid-cols-2 gap-8 items-center my-32" >
+          <div class="grid md:grid-cols-2 gap-8 gri-cols-1 items-center my-32" >
             <div data-scroll class=" h-full w-full illustration-1">
               <img src="/img/illustration1.svg" alt="illustration" >
             </div>
@@ -86,17 +90,17 @@
 
             </div>
           </div>
-          <div class="text-center">
+          <div class="text-center py-16">
             <div class="title mb-8">
-              <h2 class="font-primary title-header text-nile text-4xl capitalize mb-4 font-medium">
+              <h2 class="font-primary title-header text-nile md:text-4xl text-3xl capitalize mb-4 font-medium">
                 Get the best skills
               </h2>
               <p class="text-gray-500 title-p font-secondary text-md mb-6">
                 Lorem ipsum dolor sit 
               </p>
             </div>
-            <div class="grid grid-cols-3 card-container  gap-8 items-center">
-              <div class="card-01 shadow-xl bg-white rounded-2xl text-center p-8 mt-16">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 card-container  gap-8 items-center">
+              <div class="card-01 shadow-xl bg-white rounded-2xl text-center p-8 lg:mt-16">
                 <img src="/img/icons/design.png" alt="web design" class="mx-auto">
                 <h3 class="text-nile font-secondary capitalize text-lg my-4">web design</h3>
                 <p class="text-gray-400 font-secondary text-md mb-6">
@@ -112,7 +116,7 @@
                 </p>
                 <a class="text-sweet font-secondary capitalize text-sm">Learn more</a>
               </div>
-              <div class="card-03 shadow-xl bg-white rounded-2xl text-center p-8 mt-16">
+              <div class="card-03 shadow-xl bg-white rounded-2xl text-center p-8 lg:mt-16">
                 <img src="/img/icons/backend.png" alt="web design" class="mx-auto">
                 <h3 class="text-nile font-secondary capitalize text-lg my-4">backend development</h3>
                 <p class="text-gray-400 font-secondary text-md mb-6">
@@ -124,11 +128,11 @@
           </div>
        </section>
 
-       <div data-scroll-section class="shape h-32 w-full"></div>
+      
        <!-- Pricing -->
-       <section data-scroll-section class="pricing py-20 bg-white h-full">
+       <section data-scroll-section class="pricing py-16 bg-white h-full">
           <div class="max-w-screen-lg mx-auto">
-            <div class="grid grid-cols-2 gap-8 items-center  my-32 ">
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center  my-32 ">
               <div class="illustration-2  h-full w-full">
                 <img src="/img/illustration2.svg" alt="illustration">
               </div>
@@ -151,7 +155,7 @@
                   Lorem ipsum dolor sit 
                 </p>
               </div>
-              <div class="grid grid-cols-3 gap-8 ">
+              <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ">
                 <!-- Pricing 1 -->
                 <div class="pricing-card-01 shadow-xl bg-white rounded-2xl text-center p-8  flex items-center justify-center">
                   <div>
@@ -218,7 +222,7 @@
 
        <!-- Teacher -->
        <section data-scroll-section class="py-8 max-w-screen-lg mx-auto">
-        <div class="grid grid-cols-2 gap-8 items-center my-32 ">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-32 ">
           <div class="illustration-3  h-full w-full">
             <img src="/img/teacher.png" alt="illustration">
           </div>
@@ -234,11 +238,12 @@
           </div>
         </div>
        </section>
-       
+    </main>
 
-       <!-- Footer -->
-       <footer data-scroll-section id="footer" class=" bg-nile pt-10 pb-20">
+           <!-- Footer -->
+           <footer data-scroll-section id="footer" class=" bg-nile pt-10 pb-20 px-4">
         
+<<<<<<< HEAD
          <div class="grid grid-cols-3 gap-4 max-w-screen-lg mx-auto">
           <div class="logo">
             <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
@@ -260,6 +265,26 @@
          </div>
        </footer>
     </main>
+=======
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-4 max-w-screen-lg mx-auto">
+              <h3 class="text-white text-2xl mb-4">logo</h3>
+              <ul>
+                <h3 class="text-white text-2xl mb-4">logo</h3>
+                <li><a href="#" class="text-gray-100 text-lg">Home</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Skills</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Support</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Pricing</a></li>    
+              </ul>
+              <div>
+                <h3 class="text-white text-2xl mb-4">stay up to date</h3>
+                <form>
+                  <input type="text" class="text-gray-400 bg-white rounded w-full py-2 mb-4">
+                  <button class="submit text-white font-medium bg-sweet px-4 py-2 font-secondary rounded">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </footer>
+>>>>>>> 01075f8ad38358d3fb3e49db0bcc7f12becebac7
 
   
 
