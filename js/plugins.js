@@ -104,6 +104,15 @@ function slideToLeft (el, delay = 0) {
   })
 }
 
+
+gsap.from('.header', {
+  y: -100,
+  duration: 2,
+  opacity: 0,
+  delay: 3.5,
+  ease: "expo.inOut"
+})
+
 gsap.from('.heading-line-1', {
   y: 100,
   duration: 2,
