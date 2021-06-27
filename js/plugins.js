@@ -55,9 +55,9 @@ function slideUp (el, delay = 0) {
   },
     delay,    
     y: 100,
-    duration: .6,
+    duration: 1.2,
     opacity: 0,
-    ease: Expo.easeInOut
+    ease: "expo.inOut"
   })
 }
 
@@ -70,9 +70,10 @@ function slideToRight (el, delay = 0) {
   },
     delay,    
     x: -100,
-    duration: .6,
+    duration: 1.2,
     opacity: 0,
-    ease: Expo.easeInOut
+    ease: "expo.inOut"
+    
   })
 }
 
@@ -85,9 +86,9 @@ function slideToLeft (el, delay = 0) {
   },
     delay,    
     x: 100,
-    duration: .6,
+    duration: 1.2,
     opacity: 0,
-    ease: Expo.easeInOut
+    ease: "expo.inOut"
   })
 }
 
