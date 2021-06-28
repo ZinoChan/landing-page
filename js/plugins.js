@@ -31,10 +31,11 @@ window.addEventListener('DOMContentLoaded',() => {
 
 
 	if(document.querySelector('.loader')){
+    document.querySelector('.preloader').classList.remove('hidden');
 		setTimeout(() => {
       document.querySelector('.loader').classList.add('remove');
       console.log('remove loader');
-    }, 2800)
+    }, 3000)
 	}
 
 gsap.registerPlugin(ScrollTrigger);

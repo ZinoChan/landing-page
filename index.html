@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js overflow-x-hidden" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -20,8 +20,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/touch/favicon-16x16.png">
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/locomotive.css">
+  <link rel="stylesheet" href="/css/vendors/splide.css">
   <link rel="stylesheet" href="css/utils.scss">
   <link rel="stylesheet" href="css/main.scss">
+  
   
  
     <title>WebPage</title>
@@ -29,37 +31,40 @@
   <body class="smooth-scroll">
     <!-- Preloader -->
     <div class="loader text-center flex items-center justify-center fixed top-0 z-50 h-screen w-screen bg-rico">
-     <div>
-     
-        <h1 class="loading text-3xl font-primary text-white font-bold mb-4">Loading</h1>
+     <div class="preloader hidden">
+        <h1 class="loading text-3xl font-primary text-white font-bold mb-4">SENSEI</h1>
         <div class="progress">
           <div class="color"></div>
         </div>
      </div>
     </div>
     
-    <!-- Header -->
+   
 
-    <header class="header sticky z-40  top-0 w-full py-4 shadow-sm ">
-      <nav class="flex max-w-screen-lg mx-auto px-2 items-center justify-between">
+    <main class=" overflow-x-hidden">
+       <!-- Header -->
+
+    <header class="header sticky z-40 w-screen top-0 py-4 px-4 bg-white shadow-sm">
+      <nav class="flex max-w-screen-lg mx-auto px-2 items-center justify-between ">
         <div class="logo">
           <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
         </div>
-        <ul class="flex items-center space-x-4">
-          <li><a class="text-gray-500 font-medium font-secondary text-md" href="#">Home</a></li>
-          <li><a class="text-gray-500 font-medium font-secondary text-md"  href="#">skills</a></li>
-          <li><a class="text-gray-500 font-medium font-secondary text-md"  href="#">pricing</a></li>
-          <li><a class="text-gray-500 font-medium font-secondary text-md"  href="">testimonials</a></li>
+        <ul class="nav-list transition duration-500 ease-in-out flex md:flex-row transform  translate-x-full md:translate-x-0 flex-col md:static fixed  w-screen md:w-auto md:h-auto h-screen left-0 justify-center space-y-8 top-0 md:space-y-0 items-center md:space-x-4">
+          <li><a class="md:text-gray-500 text-white font-medium font-secondary text-md" href="#home">Home</a></li>
+          <li><a class="md:text-gray-500 text-white font-medium font-secondary text-md"  href="#skills">skills</a></li>
+          <li><a class="md:text-gray-500 text-white font-medium font-secondary text-md"  href="#pricing">pricing</a></li>
+          <li><a class="md:text-gray-500 text-white font-medium font-secondary text-md"  href="#testimonials">testimonials</a></li>
           <button class="px-4 py-2 rounded-full text-sm bg-rico  text-white font-bold font-secondary">
             Contact Us
           </button>
         </ul>
+        <div class="bars md:hidden block relative z-50">
+          <div></div>
+        </div>
       </nav>
     </header>
-
-    <main class=" px-4 overflow-x-hidden">
        <!-- Hero -->
-      <section data-scroll-section class=" py-48  flex items-center justify-center hero-section">
+      <section data-scroll-section class=" py-48 px-4 flex items-center justify-center hero-section">
           <div class="max-w-screen-md text-center">
             <h1 class="lg:text-6xl text-4xl leading-realaxed  overflow-hidden font-bold font-primary text-sweet mb-4">
               <p class="heading-line-1 mb-4">Turn your passion into </p> 
@@ -75,7 +80,7 @@
       </section>
 
        <!-- Skills -->
-       <section data-scroll-section class="skills max-w-screen-lg mx-auto">
+       <section data-scroll-section class="skills px-4 max-w-screen-lg mx-auto">
 
           <div class="grid md:grid-cols-2 gap-8 gri-cols-1 items-center my-32" >
             <div data-scroll class=" h-full w-full illustration-1">
@@ -132,7 +137,7 @@
 
       
        <!-- Pricing -->
-       <section data-scroll-section class="pricing py-16 bg-white h-full">
+       <section data-scroll-section class="pricing py-16 bg-white h-full px-4">
           <div class="max-w-screen-lg mx-auto">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center  my-32 ">
               <div class="illustration-2  h-full w-full">
@@ -223,7 +228,7 @@
      
 
        <!-- Teacher -->
-       <section data-scroll-section class="py-8 max-w-screen-lg mx-auto">
+       <section data-scroll-section class="pt-8 max-w-screen-lg mx-auto px-4">
         <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center my-32 ">
           <div class="illustration-3  h-full w-full">
             <img src="/img/teacher.png" alt="illustration">
@@ -240,33 +245,108 @@
           </div>
         </div>
        </section>
-    </main>
 
-           <!-- Footer -->
-           <footer data-scroll-section id="footer" class=" bg-nile pt-10 pb-20 px-4">
+       <section data-scroll-section class="testimonials text-center px-4 py-36 max-w-screen-lg mx-auto">
+        <div class="title mb-8">
+          <h2 class="font-primary title-header text-nile md:text-4xl text-3xl capitalize mb-4 font-medium">
+            Testimonials
+          </h2>
+          <p class="text-gray-500 title-p font-secondary text-md mb-6">
+            Lorem ipsum dolor sit 
+          </p>
+        </div>
+        <div class="splide">
+          <div class="splide__track py-20">
+            <div class="splide__list">
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-sweet rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-rico rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-kova rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-sweet rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-rico rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-kova rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-sweet rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+              <div class="splide__slide text-center p-6 bg-white rounded-lg shadow-xl">
+                <div class="mb-4 bg-rico rounded w-16 h-16 mx-auto"></div>
+                <h4 class="text-lg text-nile capitalize mb-4">Jane Doe</h4>
+                <p class="text-md text-gray-400">
+                  nisi neque cras in ultrices tellus dis. ultrices tellus dis.
+                </p>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+       </section>
+          <!-- Footer -->
+          <footer data-scroll-section id="footer" class=" bg-nile pt-10 pb-20 px-4">
         
 
-         <div class="grid grid-cols-3 gap-4 max-w-screen-lg mx-auto">
-          <div class="logo">
-            <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
-          </div>
-           <ul>
-             <h3 class="text-white text-2xl mb-4">logo</h3>
-             <li><a href="#" class="text-gray-100 text-lg">Home</a></li>
-             <li><a href="#" class="text-gray-100 text-lg">Skills</a></li>
-             <li><a href="#" class="text-gray-100 text-lg">Support</a></li>
-             <li><a href="#" class="text-gray-100 text-lg">Pricing</a></li>    
-           </ul>
-           <div>
-             <h3 class="text-white text-2xl mb-4">stay up to date</h3>
-             <form>
-               <input type="text" class="text-gray-400 bg-white rounded w-full py-2 mb-4">
-               <button class="submit text-white font-medium bg-sweet px-4 py-2 font-secondary rounded">Subscribe</button>
-             </form>
-           </div>
-         </div>
-       </footer>
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-4 max-w-screen-lg mx-auto">
+             <div class="logo">
+               <img src="/img/logo.png " class="w-28 h-auto" alt="logo">
+             </div>
+              <ul>
+                <h3 class="text-white text-2xl mb-4">More</h3>
+                <li><a href="#" class="text-gray-100 text-lg">Home</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Skills</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Support</a></li>
+                <li><a href="#" class="text-gray-100 text-lg">Pricing</a></li>    
+              </ul>
+              <div>
+                <h3 class="text-white text-2xl mb-4">stay up to date</h3>
+                <form>
+                  <input type="text" class="text-gray-400 bg-white rounded w-full py-2 mb-4">
+                  <button class="submit text-white font-medium bg-sweet px-4 py-2 font-secondary rounded">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </footer>
     </main>
+
+        
+    
 
 
   
@@ -276,7 +356,24 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      new Splide( '.splide', {
+        autoplay: true,
+        perPage: 3,
+       
+        arrows: false,
+        gap: 30,
+        breakpoints: {
+          440: {
+            perPage: 1,
+          },
+          640: {
+            perPage: 2,
+          },
+        }
+      }).mount();
+    </script>
 
     <script src="/js/main.js"></script>
     <script src="/js/plugins.js"></script>
