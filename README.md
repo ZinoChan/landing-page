@@ -2,7 +2,7 @@
 
 ## Link
 
-- www.devsensei.netlify.app
+- https://devsensei.netlify.app/
 
 ## Tools
 
